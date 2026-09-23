@@ -1,0 +1,41 @@
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build directories
+out/
+build/
+bin/
+obj/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+install_manifest.txt
+
+# Compiled files
+*.exe
+*.dll
+*.obj
+*.o
+*.lib
+*.pdb
+*.ilk
+
+# Test results
+TestResults/
+*.trx
+
+# Debug files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
