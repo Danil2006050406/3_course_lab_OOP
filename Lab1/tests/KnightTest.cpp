@@ -117,3 +117,29 @@ TEST(KnightTest, FindsEquipmentInPriceRange) {
     EXPECT_EQ(result[0]->getType(), "Sword");
     EXPECT_EQ(result[1]->getType(), "Axe");
 }
+TEST(KnightTest, SwordStoresCorrectValues) {
+    Sword sword(4.5, 750.0, 80);
+
+    EXPECT_DOUBLE_EQ(sword.getWeight(), 4.5);
+    EXPECT_DOUBLE_EQ(sword.getPrice(), 750.0);
+    EXPECT_EQ(sword.getDamage(), 80);
+    EXPECT_EQ(sword.getType(), "Sword");
+}
+
+TEST(KnightTest, AxeStoresCorrectValues) {
+    Axe axe(6.0, 600.0, 95);
+
+    EXPECT_DOUBLE_EQ(axe.getWeight(), 6.0);
+    EXPECT_DOUBLE_EQ(axe.getPrice(), 600.0);
+    EXPECT_EQ(axe.getDamage(), 95);
+    EXPECT_EQ(axe.getType(), "Axe");
+}
+
+TEST(KnightTest, BowStoresCorrectValues) {
+    Bow bow(2.5, 450.0, 60);
+
+    EXPECT_DOUBLE_EQ(bow.getWeight(), 2.5);
+    EXPECT_DOUBLE_EQ(bow.getPrice(), 450.0);
+    EXPECT_EQ(bow.getDamage(), 60);
+    EXPECT_EQ(bow.getType(), "Bow");
+}
