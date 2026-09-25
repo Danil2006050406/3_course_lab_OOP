@@ -5,8 +5,12 @@
 
 class Axe : public Weapon {
 public:
-    Axe(double weight, double price, int damage);
-
+    Axe(
+        const std::string& name,
+        double weight,
+        double price,
+        int damage
+    );
     std::string getType() const override;
 };
 

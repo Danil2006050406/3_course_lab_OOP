@@ -1,7 +1,11 @@
 #include "weapons/Bow.h"
 
-Bow::Bow(double weight, double price, int damage)
-    : Weapon("Long Bow", weight, price, damage) {
+Bow::Bow(
+    const std::string& name,
+    double weight,
+    double price,
+    int damage
+) : Weapon(name, weight, price, damage) {
 }
 
 std::string Bow::getType() const {

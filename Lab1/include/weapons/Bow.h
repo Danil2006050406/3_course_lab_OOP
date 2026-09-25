@@ -5,8 +5,12 @@
 
 class Bow : public Weapon {
 public:
-    Bow(double weight, double price, int damage);
-
+    Bow(
+        const std::string& name,
+        double weight,
+        double price,
+        int damage
+    );
     std::string getType() const override;
 };
 

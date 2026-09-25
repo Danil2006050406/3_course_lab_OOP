@@ -1,7 +1,11 @@
 #include "weapons/Axe.h"
 
-Axe::Axe(double weight, double price, int damage)
-    : Weapon("Battle Axe", weight, price, damage) {
+Axe::Axe(
+    const std::string& name,
+    double weight,
+    double price,
+    int damage
+) : Weapon(name, weight, price, damage) {
 }
 
 std::string Axe::getType() const {

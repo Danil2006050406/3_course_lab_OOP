@@ -12,11 +12,11 @@ TEST(KnightTest, CanEquipWeapons) {
     Knight knight("Richard");
 
     knight.equip(
-        std::make_unique<Sword>(4.5, 750.0, 80)
+        std::make_unique<Sword>("Long Sword", 4.5, 750.0, 80)
     );
 
     knight.equip(
-        std::make_unique<Axe>(6.0, 600.0, 95)
+        std::make_unique<Axe>("Battle Axe", 6.0, 600.0, 95)
     );
 
     EXPECT_EQ(knight.getEquipment().size(), 2);
@@ -26,11 +26,11 @@ TEST(KnightTest, CalculatesTotalWeight) {
     Knight knight("Richard");
 
     knight.equip(
-        std::make_unique<Sword>(4.5, 750.0, 80)
+        std::make_unique<Sword>("Long Sword", 4.5, 750.0, 80)
     );
 
     knight.equip(
-        std::make_unique<Bow>(2.5, 450.0, 60)
+        std::make_unique<Bow>("Long Bow", 2.5, 450.0, 60)
     );
 
     EXPECT_DOUBLE_EQ(
@@ -43,11 +43,11 @@ TEST(KnightTest, CalculatesTotalPrice) {
     Knight knight("Richard");
 
     knight.equip(
-        std::make_unique<Sword>(4.5, 750.0, 80)
+        std::make_unique<Sword>("Long Sword", 4.5, 750.0, 80)
     );
 
     knight.equip(
-        std::make_unique<Axe>(6.0, 600.0, 95)
+        std::make_unique<Axe>("Battle Axe", 6.0, 600.0, 95)
     );
 
     EXPECT_DOUBLE_EQ(
@@ -59,7 +59,7 @@ TEST(KnightTest, SortsEquipmentByWeight) {
     Knight knight("Richard");
 
     knight.equip(
-        std::make_unique<Sword>(4.5, 750.0, 80)
+        std::make_unique<Sword>("Long Sword", 4.5, 750.0, 80)
     );
 
     knight.equip(
@@ -72,7 +72,7 @@ TEST(KnightTest, SortsEquipmentByWeight) {
     );
 
     knight.equip(
-        std::make_unique<Bow>(2.5, 450.0, 60)
+        std::make_unique<Bow>("Long Bow", 2.5, 450.0, 60)
     );
 
     knight.sortEquipmentByWeight();
@@ -89,15 +89,15 @@ TEST(KnightTest, FindsEquipmentInPriceRange) {
     Knight knight("Richard");
 
     knight.equip(
-        std::make_unique<Sword>(4.5, 750.0, 80)
+        std::make_unique<Sword>("Long Sword", 4.5, 750.0, 80)
     );
 
     knight.equip(
-        std::make_unique<Axe>(6.0, 600.0, 95)
+        std::make_unique<Axe>("Battle Axe", 6.0, 600.0, 95)
     );
 
     knight.equip(
-        std::make_unique<Bow>(2.5, 450.0, 60)
+        std::make_unique<Bow>("Long Bow", 2.5, 450.0, 60)
     );
 
     knight.equip(
@@ -118,28 +118,31 @@ TEST(KnightTest, FindsEquipmentInPriceRange) {
     EXPECT_EQ(result[1]->getType(), "Axe");
 }
 TEST(KnightTest, SwordStoresCorrectValues) {
-    Sword sword(4.5, 750.0, 80);
+    Sword sword("Excalibur", 3.2, 5000.0, 150);
 
-    EXPECT_DOUBLE_EQ(sword.getWeight(), 4.5);
-    EXPECT_DOUBLE_EQ(sword.getPrice(), 750.0);
-    EXPECT_EQ(sword.getDamage(), 80);
+    EXPECT_EQ(sword.getName(), "Excalibur");
+    EXPECT_DOUBLE_EQ(sword.getWeight(), 3.2);
+    EXPECT_DOUBLE_EQ(sword.getPrice(), 5000.0);
+    EXPECT_EQ(sword.getDamage(), 150);
     EXPECT_EQ(sword.getType(), "Sword");
 }
 
 TEST(KnightTest, AxeStoresCorrectValues) {
-    Axe axe(6.0, 600.0, 95);
+    Axe axe("Battle Axe", 5.5, 2500.0, 130);
 
-    EXPECT_DOUBLE_EQ(axe.getWeight(), 6.0);
-    EXPECT_DOUBLE_EQ(axe.getPrice(), 600.0);
-    EXPECT_EQ(axe.getDamage(), 95);
+    EXPECT_EQ(axe.getName(), "Battle Axe");
+    EXPECT_DOUBLE_EQ(axe.getWeight(), 5.5);
+    EXPECT_DOUBLE_EQ(axe.getPrice(), 2500.0);
+    EXPECT_EQ(axe.getDamage(), 130);
     EXPECT_EQ(axe.getType(), "Axe");
 }
 
 TEST(KnightTest, BowStoresCorrectValues) {
-    Bow bow(2.5, 450.0, 60);
+    Bow bow("Hunter Bow", 2.0, 2200.0, 100);
 
-    EXPECT_DOUBLE_EQ(bow.getWeight(), 2.5);
-    EXPECT_DOUBLE_EQ(bow.getPrice(), 450.0);
-    EXPECT_EQ(bow.getDamage(), 60);
+    EXPECT_EQ(bow.getName(), "Hunter Bow");
+    EXPECT_DOUBLE_EQ(bow.getWeight(), 2.0);
+    EXPECT_DOUBLE_EQ(bow.getPrice(), 2200.0);
+    EXPECT_EQ(bow.getDamage(), 100);
     EXPECT_EQ(bow.getType(), "Bow");
 }
