@@ -26,7 +26,7 @@ public final class Main {
         train.sortByComfort().forEach(carriage -> System.out.printf(
                 "%s - comfort %d, passengers %d, baggage %d%n",
                 carriage.getName(), carriage.getComfortLevel(),
-                carriage.getPassengerCapacity(), carriage.getBaggageCapacity()));
+                carriage.getPassengerCount(), carriage.getBaggageCount()));
 
         int minPassengers = 20;
         int maxPassengers = 45;
