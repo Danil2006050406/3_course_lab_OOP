@@ -13,8 +13,8 @@ class RollingStockTest {
 
         assertEquals("Comfort", carriage.getName());
         assertEquals(45.0, carriage.getWeight());
-        assertEquals(40, carriage.getPassengerCapacity());
-        assertEquals(25, carriage.getBaggageCapacity());
+        assertEquals(40, carriage.getPassengerCount());
+        assertEquals(25, carriage.getBaggageCount());
         assertEquals(4, carriage.getComfortLevel());
         assertEquals("Passenger carriage", carriage.getType());
     }

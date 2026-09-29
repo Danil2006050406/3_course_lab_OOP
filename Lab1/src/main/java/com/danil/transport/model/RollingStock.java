@@ -1,6 +1,5 @@
 package com.danil.transport.model;
 
-/** Base class for railway rolling stock. */
 public abstract class RollingStock {
     private final String name;
     private final double weight;

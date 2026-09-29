@@ -1,6 +1,5 @@
 package com.danil.transport.model;
 
-/** Passenger carriage with passenger count, baggage count and comfort level. */
 public class PassengerCarriage extends RollingStock {
     private final int passengerCount;
     private final int baggageCount;

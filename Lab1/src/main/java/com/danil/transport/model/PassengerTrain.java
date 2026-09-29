@@ -5,7 +5,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/** Passenger train containing a locomotive and passenger carriages. */
 public class PassengerTrain {
     private final String number;
     private final Locomotive locomotive;
