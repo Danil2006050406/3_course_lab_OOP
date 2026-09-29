@@ -17,10 +17,10 @@ class PassengerTrainMockitoTest {
         PassengerCarriage first = mock(PassengerCarriage.class);
         PassengerCarriage second = mock(PassengerCarriage.class);
 
-        when(first.getPassengerCapacity()).thenReturn(30);
-        when(second.getPassengerCapacity()).thenReturn(20);
-        when(first.getBaggageCapacity()).thenReturn(10);
-        when(second.getBaggageCapacity()).thenReturn(8);
+        when(first.getPassengerCount()).thenReturn(30);
+        when(second.getPassengerCount()).thenReturn(20);
+        when(first.getBaggageCount()).thenReturn(10);
+        when(second.getBaggageCount()).thenReturn(8);
 
         train.addCarriage(first);
         train.addCarriage(second);
