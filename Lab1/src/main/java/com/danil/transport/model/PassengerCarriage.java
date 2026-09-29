@@ -1,24 +1,24 @@
 package com.danil.transport.model;
 
-/** Passenger carriage with capacity, baggage capacity and comfort level. */
+/** Passenger carriage with passenger count, baggage count and comfort level. */
 public class PassengerCarriage extends RollingStock {
-    private final int passengerCapacity;
-    private final int baggageCapacity;
+    private final int passengerCount;
+    private final int baggageCount;
     private final int comfortLevel;
 
-    public PassengerCarriage(String name, double weight, int passengerCapacity,
-                             int baggageCapacity, int comfortLevel) {
+    public PassengerCarriage(String name, double weight, int passengerCount,
+                             int baggageCount, int comfortLevel) {
         super(name, weight);
-        if (passengerCapacity < 0 || baggageCapacity < 0 || comfortLevel < 1) {
+        if (passengerCount < 0 || baggageCount < 0 || comfortLevel < 1) {
             throw new IllegalArgumentException("Invalid carriage parameters");
         }
-        this.passengerCapacity = passengerCapacity;
-        this.baggageCapacity = baggageCapacity;
+        this.passengerCount = passengerCount;
+        this.baggageCount = baggageCount;
         this.comfortLevel = comfortLevel;
     }
 
-    public int getPassengerCapacity() { return passengerCapacity; }
-    public int getBaggageCapacity() { return baggageCapacity; }
+    public int getPassengerCount() { return passengerCount; }
+    public int getBaggageCount() { return baggageCount; }
     public int getComfortLevel() { return comfortLevel; }
 
     @Override
