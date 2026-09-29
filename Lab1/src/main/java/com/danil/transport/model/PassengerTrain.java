@@ -35,13 +35,13 @@ public class PassengerTrain {
 
     public int calculateTotalPassengers() {
         return carriages.stream()
-                .mapToInt(PassengerCarriage::getPassengerCapacity)
+                .mapToInt(PassengerCarriage::getPassengerCount)
                 .sum();
     }
 
     public int calculateTotalBaggage() {
         return carriages.stream()
-                .mapToInt(PassengerCarriage::getBaggageCapacity)
+                .mapToInt(PassengerCarriage::getBaggageCount)
                 .sum();
     }
 
@@ -56,8 +56,8 @@ public class PassengerTrain {
             throw new IllegalArgumentException("Minimum cannot exceed maximum");
         }
         return carriages.stream()
-                .filter(carriage -> carriage.getPassengerCapacity() >= min
-                        && carriage.getPassengerCapacity() <= max)
+                .filter(carriage -> carriage.getPassengerCount() >= min
+                        && carriage.getPassengerCount() <= max)
                 .collect(Collectors.toList());
     }
 }
