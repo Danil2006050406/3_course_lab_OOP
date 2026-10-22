@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="planes.xsd">
+    <Aircraft id="P001">
+        <Model>F-16 Fighting Falcon</Model>
+        <Origin>USA</Origin>
+        <Chars>
+            <Char>
+                <Type>Fighter</Type>
+                <Seats>1</Seats>
+                <Armament>
+                    <Missiles>6</Missiles>
+                    <Radar>true</Radar>
+                </Armament>
+            </Char>
+            <Char>
+                <Type>Interceptor</Type>
+                <Seats>2</Seats>
+                <Armament>
+                    <Missiles>4</Missiles>
+                    <Radar>true</Radar>
+                </Armament>
+            </Char>
+        </Chars>
+        <Parameters>
+            <Length>15.06</Length>
+            <Width>9.96</Width>
+            <Height>4.88</Height>
+        </Parameters>
+        <Price>12000000</Price>
+    </Aircraft>
+    <Aircraft id="P002">
+        <Model>U-2 Dragon Lady</Model>
+        <Origin>USA</Origin>
+        <Chars>
+            <Char>
+                <Type>Reconnaissance</Type>
+                <Seats>1</Seats>
+            </Char>
+            <Char>
+                <Type>Support</Type>
+                <Seats>1</Seats>
+                <Armament>
+                    <Missiles>0</Missiles>
+                    <Radar>false</Radar>
+                </Armament>
+            </Char>
+        </Chars>
+        <Parameters>
+            <Length>19.2</Length>
+            <Width>31.4</Width>
+            <Height>4.9</Height>
+        </Parameters>
+        <Price>5000000</Price>
+    </Aircraft>
+    <Aircraft id="MIG001">
+        <Model>MiG-29</Model>
+        <Origin>Ukraine</Origin>
+        <Chars>
+            <Char>
+                <Type>Fighter</Type>
+                <Seats>1</Seats>
+                <Armament>
+                    <Missiles>4</Missiles>
+                    <Radar>true</Radar>
+                </Armament>
+            </Char>
+            <Char>
+                <Type>Escort</Type>
+                <Seats>2</Seats>
+                <Armament>
+                    <Missiles>2</Missiles>
+                    <Radar>true</Radar>
+                </Armament>
+            </Char>
+        </Chars>
+        <Parameters>
+            <Length>17.32</Length>
+            <Width>11.36</Width>
+            <Height>4.73</Height>
+        </Parameters>
+        <Price>8000000</Price>
+    </Aircraft>
+</Plane>

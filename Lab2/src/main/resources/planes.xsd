@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="AircraftType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Support"/>
+            <xs:enumeration value="Escort"/>
+            <xs:enumeration value="Fighter"/>
+            <xs:enumeration value="Interceptor"/>
+            <xs:enumeration value="Reconnaissance"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SeatsType">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MissilesType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PositiveDimension">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:maxInclusive value="1000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PriceType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="1000000000000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="ArmamentType">
+        <xs:sequence>
+            <xs:element name="Missiles" type="MissilesType"/>
+            <xs:element name="Radar" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CharType">
+        <xs:sequence>
+            <xs:element name="Type" type="AircraftType"/>
+            <xs:element name="Seats" type="SeatsType"/>
+            <xs:element name="Armament" type="ArmamentType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CharsType">
+        <xs:sequence>
+            <xs:element name="Char" type="CharType" minOccurs="2" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ParametersType">
+        <xs:sequence>
+            <xs:element name="Length" type="PositiveDimension"/>
+            <xs:element name="Width" type="PositiveDimension"/>
+            <xs:element name="Height" type="PositiveDimension"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AircraftTypeComplex">
+        <xs:sequence>
+            <xs:element name="Model" type="xs:token"/>
+            <xs:element name="Origin" type="xs:token"/>
+            <xs:element name="Chars" type="CharsType"/>
+            <xs:element name="Parameters" type="ParametersType"/>
+            <xs:element name="Price" type="PriceType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="Plane">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Aircraft" type="AircraftTypeComplex" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
