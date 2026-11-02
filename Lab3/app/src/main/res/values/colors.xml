@@ -1,0 +1,5 @@
+<resources>
+    <color name="primary">#356B68</color><color name="primary_dark">#244E4D</color><color name="secondary">#D9A85F</color>
+    <color name="surface_light">#F3F7F4</color><color name="surface_card_light">#FFFFFF</color><color name="text_primary_light">#173432</color>
+    <color name="surface_dark">#152522</color><color name="surface_card_dark">#243632</color><color name="text_primary_dark">#E7F0EC</color>
+</resources>

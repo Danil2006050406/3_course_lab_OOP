@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SirovarWeather</string>
+    <string name="screen_weather">Погода</string><string name="search_city">Пошук міста</string><string name="settings">Налаштування</string>
+    <string name="refresh">Оновити</string><string name="choose_city">Оберіть місто</string><string name="search_hint">Введіть назву міста</string>
+    <string name="hourly_title">Найближчі години</string><string name="daily_title">Прогноз на 7 днів</string>
+    <string name="feels_like">Відчувається</string><string name="humidity">Вологість</string><string name="wind">Вітер</string><string name="precipitation">Опади</string>
+    <string name="min_max_temperature">%1$d° – %2$d%3$s</string><string name="temperature_value">%1$d%2$s</string><string name="precipitation_percent">%1$d%%</string>
+    <string name="last_updated">Оновлено %1$s</string><string name="loading">Завантаження погоди…</string><string name="offline_cached">Немає зв’язку. Показано збережені дані, вони можуть бути застарілими.</string>
+    <string name="network_error">Не вдалося отримати погоду. Перевірте з’єднання.</string><string name="invalid_response">Сервер надіслав некоректні дані.</string>
+    <string name="no_cached_weather">Немає збережених даних. Під’єднайтеся до інтернету, щоб завантажити прогноз.</string>
+    <string name="city_not_found">Місто не знайдено. Спробуйте іншу назву.</string><string name="search_error">Не вдалося знайти місто. Перевірте з’єднання.</string>
+    <string name="searching">Пошук міст…</string><string name="restore_city">Повернути попереднє місто</string>
+    <string name="temperature_unit">Одиниці температури</string><string name="celsius">Цельсій (°C)</string><string name="fahrenheit">Фаренгейт (°F)</string>
+    <string name="wind_unit">Одиниці швидкості вітру</string><string name="kilometers_per_hour">км/год</string><string name="meters_per_second">м/с</string>
+    <string name="language">Мова</string><string name="ukrainian">Українська</string><string name="english">English</string><string name="appearance">Оформлення</string><string name="dark_theme">Темна тема</string>
+    <string name="weather_clear">Ясно</string><string name="weather_partly_cloudy">Мінлива хмарність</string><string name="weather_cloudy">Хмарно</string>
+    <string name="weather_fog">Туман</string><string name="weather_rain">Дощ</string><string name="weather_snow">Сніг</string><string name="weather_thunderstorm">Гроза</string><string name="weather_unknown">Змінна погода</string>
+    <string name="widget_city">Місто</string><string name="widget_weather">Погода</string><string name="widget_small_description">Зараз у місті</string><string name="widget_humidity_label">Вологість %1$s</string><string name="widget_wind_label">Вітер %1$s</string>
+</resources>

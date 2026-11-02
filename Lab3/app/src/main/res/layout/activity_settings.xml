@@ -1,0 +1,22 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings" android:textSize="25sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="@string/temperature_unit" android:textSize="17sp" android:textStyle="bold" />
+        <RadioGroup android:id="@+id/temperature_group" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/unit_celsius" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/celsius" />
+            <RadioButton android:id="@+id/unit_fahrenheit" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fahrenheit" />
+        </RadioGroup>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/wind_unit" android:textSize="17sp" android:textStyle="bold" />
+        <RadioGroup android:id="@+id/wind_group" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/unit_kmh" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/kilometers_per_hour" />
+            <RadioButton android:id="@+id/unit_ms" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/meters_per_second" />
+        </RadioGroup>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/language" android:textSize="17sp" android:textStyle="bold" />
+        <RadioGroup android:id="@+id/language_group" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/language_uk" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ukrainian" />
+            <RadioButton android:id="@+id/language_en" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/english" />
+        </RadioGroup>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/appearance" android:textSize="17sp" android:textStyle="bold" />
+        <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/dark_theme_switch" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dark_theme" />
+    </LinearLayout>
+</ScrollView>
